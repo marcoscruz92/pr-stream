@@ -1,2 +1,2 @@
 # pr-stream
-Flickr stream of Puerto Rico photos.
+Photo stream of Puerto Rico photos using the Flickr API.
