@@ -1,3 +1,4 @@
+$("#loading").show();
 $(document).ready(function(){
     //add endpoint to variable
     var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
@@ -33,6 +34,7 @@ $(document).ready(function(){
         }
       });
       //Injects HTML to website
+      $("#loading").hide();
       $("#test").html(photoHTML);
     }
 
@@ -70,12 +72,16 @@ $(document).ready(function(){
     $("#one-grid").click(function(){
       $("span").removeClass('active');
       $(this).addClass('active');
+      $("#loading").show();
       $.getJSON(flickerAPI, flickrOptions, displayPhotosGrid);
+
     });
     // When two-grid is click images take a whole row
     $("#column-grid").click(function(){
       $("span").removeClass('active');
       $(this).addClass('active');
+      $("#loading").show();
       $.getJSON(flickerAPI, flickrOptions, displayPhotos);
+
     });
 });
