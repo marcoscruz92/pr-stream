@@ -27,6 +27,10 @@ $(document).ready(function(){
           photoHTML += '<a href="' + photo.link + '" class="info" target="_blank">Download</a>';
           photoHTML += '</div>';
           photoHTML += '</div>';
+          photoHTML += '<div class="photo-details hidden-lg center-block">';
+          photoHTML += '<span id="author-name"><i class="fa fa-camera fa-lg"></i>' +photo.author.slice(17) + '</span>';
+          photoHTML += '<span id="mobile-download" class="pull-right text-center"><a href="'+ photo.link +'" target="_blank"><i class="fa fa-download fa-lg"></i></a></span>';
+          photoHTML += '</div>';
           photoHTML += '</div>';
         } else {
           photoHTML += '</div>';
@@ -55,6 +59,10 @@ $(document).ready(function(){
           photoHTML += '<h2><i class="fa fa-camera"></i>' +photo.author.slice(17) + '</h2>';
           photoHTML += '<a href="' + photo.link + '" class="info" target="_blank">Download</a>';
           photoHTML += '</div>';
+          photoHTML += '</div>';
+          photoHTML += '<div class="photo-details hidden-lg center-block">';
+          photoHTML += '<span id="author-name"><i class="fa fa-camera fa-lg"></i>' +photo.author.slice(17) + '</span>';
+          photoHTML += '<span id="mobile-download" class="pull-right text-center"><a href="'+ photo.link +'" target="_blank"><i class="fa fa-download fa-lg"></i></a></span>';
           photoHTML += '</div>';
           photoHTML += '</div>';
         } else {
